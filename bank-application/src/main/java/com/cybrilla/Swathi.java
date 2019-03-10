@@ -19,6 +19,11 @@ public class Swathi {
 		System.out.println(swathi2.name);
 		System.out.println(swathi2.balance);
 		
+		CheckingAccount swathi3 = new CheckingAccount();
+		System.out.println("swathi3 details");
+		System.out.println(swathi3.id);
+		System.out.println(swathi3.name);
+		System.out.println(swathi3.balance);
 	}
 
 }
@@ -41,3 +46,10 @@ Account(int id1,String name1,double balance1)//constructor overloading
 	balance = balance1;
 }
 }
+  
+  class CheckingAccount extends Account
+  {
+	 
+  }
+
+  
