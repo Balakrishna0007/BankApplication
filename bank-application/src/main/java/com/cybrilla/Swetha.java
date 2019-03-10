@@ -5,7 +5,7 @@ public class Swetha {
 	{
 		
 		System.out.println("Hello World");
-		System.out.println("My New Program");
+		
 	}
 
 }
