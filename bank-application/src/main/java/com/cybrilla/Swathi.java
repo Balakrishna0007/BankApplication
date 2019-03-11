@@ -19,11 +19,17 @@ public class Swathi {
 		System.out.println(swathi2.name);
 		System.out.println(swathi2.balance);
 		
-		CheckingAccount swathi3 = new CheckingAccount();
+		CheckingAccount swathi3 = new CheckingAccount(); // default parent constructor
 		System.out.println("swathi3 details");
 		System.out.println(swathi3.id);
 		System.out.println(swathi3.name);
 		System.out.println(swathi3.balance);
+		
+		CheckingAccount swathi4 = new CheckingAccount(103,"Sree",350);
+		System.out.println("swathi4 details");
+		System.out.println(swathi4.id);
+		System.out.println(swathi4.name);
+		System.out.println(swathi4.balance);
 	}
 
 }
@@ -49,7 +55,13 @@ Account(int id1,String name1,double balance1)//constructor overloading
   
   class CheckingAccount extends Account
   {
-	 
+	  CheckingAccount()
+	  {
+		  super();
+	  }
+	 CheckingAccount(int id3,String name3,double balance3){
+		super(id3,name3,balance3); 
+	 }
   }
 
   
