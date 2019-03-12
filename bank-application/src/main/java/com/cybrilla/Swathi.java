@@ -6,7 +6,7 @@ public class Swathi {
 	
 		System.out.println("Hello World");
 		
-		Account swathi1=new Account();
+	/*	Account swathi1=new Account();
 		
 		System.out.println("swathi1 details");
 		System.out.println(swathi1.id);
@@ -17,13 +17,16 @@ public class Swathi {
 		System.out.println("swathi2 details");
 		System.out.println(swathi2.id);
 		System.out.println(swathi2.name);
-		System.out.println(swathi2.balance);
+		System.out.println(swathi2.balance);*/
 		
 		CheckingAccount swathi3 = new CheckingAccount(); // default parent constructor
 		System.out.println("swathi3 details");
 		System.out.println(swathi3.id);
 		System.out.println(swathi3.name);
 		System.out.println(swathi3.balance);
+		
+		double interest = swathi3.calculate();
+		System.out.println(interest);
 		
 		CheckingAccount swathi4 = new CheckingAccount(103,"Sree",350);
 		System.out.println("swathi4 details");
@@ -33,7 +36,7 @@ public class Swathi {
 	}
 
 }
-  class Account{
+  abstract class Account{
 int id;
 String name;
 double balance;
@@ -51,6 +54,7 @@ Account(int id1,String name1,double balance1)//constructor overloading
 	name = name1;
 	balance = balance1;
 }
+public abstract double calculate();
 }
   
   class CheckingAccount extends Account
@@ -62,6 +66,12 @@ Account(int id1,String name1,double balance1)//constructor overloading
 	 CheckingAccount(int id3,String name3,double balance3){
 		super(id3,name3,balance3); 
 	 }
+	 
+	 public double calculate()
+	 {
+		 return balance*3;
+	 }
+	 
   }
 
   
