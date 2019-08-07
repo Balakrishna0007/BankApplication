@@ -1,6 +1,6 @@
 package com.cybrilla;
 
-public class ABCD1 
+public class ABCD4 
 {
   static  int i,j,k;
    
@@ -15,7 +15,7 @@ public class ABCD1
             
             for (int k = 0; k <= i; k++)
             {
-                System.out.print("$ ");
+                System.out.print("# ");
                 
             }
             System.out.println();	
