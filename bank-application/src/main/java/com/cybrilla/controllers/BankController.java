@@ -18,11 +18,9 @@ public class BankController
 	@Autowired
 	BankService service;
 	
-	@PostMapping("/registercustomer")
+	@PostMapping("/registercustomerID")
 	public BankCustomer addCustomer(@RequestBody BankCustomer customer)
 	{
-		
-		
 		BankCustomer cus = service.createUser(customer);
 		return cus;
 	}
