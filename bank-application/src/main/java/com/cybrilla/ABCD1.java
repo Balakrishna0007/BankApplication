@@ -6,7 +6,7 @@ public class ABCD1
    
 	public static void main(String[] args)
 	{
-		for (int i = 0; i < 6; i++) 
+		for (int i = 0; i < 7; i++) 
 		{
             for (int j = 0; j < 5 - i; j++)
             {
