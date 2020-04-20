@@ -1,6 +1,8 @@
 package com.cybrilla.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -26,9 +28,19 @@ public class BankController
 	}
 	
 	@GetMapping("/getdetails")
-	public BankCustomer getCustomerDetails(@RequestParam int customerId)
+	public ResponseEntity<Object> getCustomerDetails(@RequestParam int customerId)
 	{
-		return service.fetchUserDetails(customerId);
+		ResponseEntity<Object> response = null;
+		try
+		{
+			BankCustomer customer = service.fetchUserDetails(customerId);
+			response = new ResponseEntity<>(customer, HttpStatus.OK);
+		}
+		catch (Exception ex) 
+		{
+			response = new ResponseEntity<>("Not Found "+customerId, HttpStatus.NOT_FOUND);
+		}
+		return response;
 	}
 	
 	@PutMapping("/deposit")
