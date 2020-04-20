@@ -1,10 +1,10 @@
-package com.cybrilla.service;
+package com.bank.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.cybrilla.entity.LoginEntity;
-import com.cybrilla.repository.LoginRepository;
+import com.bank.entity.LoginEntity;
+import com.bank.repository.LoginRepository;
 
 @Service
 public class LoginService 

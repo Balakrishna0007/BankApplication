@@ -1,8 +1,8 @@
-package com.cybrilla.repository;
+package com.bank.repository;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.cybrilla.entity.LoginEntity;
+import com.bank.entity.LoginEntity;
 
 public interface LoginRepository extends CrudRepository<LoginEntity, Integer>
 {

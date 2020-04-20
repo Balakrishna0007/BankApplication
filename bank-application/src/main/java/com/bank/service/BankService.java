@@ -1,11 +1,11 @@
-package com.cybrilla.service;
+package com.bank.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.cybrilla.entity.BankCustomer;
-import com.cybrilla.exception.CustomerNotFoundException;
-import com.cybrilla.repository.BankRepository;
+import com.bank.entity.BankCustomer;
+import com.bank.exception.CustomerNotFoundException;
+import com.bank.repository.BankRepository;
 
 @Service
 public class BankService 

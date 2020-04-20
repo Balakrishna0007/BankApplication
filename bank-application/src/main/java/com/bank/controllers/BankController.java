@@ -1,4 +1,4 @@
-package com.cybrilla.controllers;
+package com.bank.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.cybrilla.entity.BankCustomer;
-import com.cybrilla.service.BankService;
+import com.bank.entity.BankCustomer;
+import com.bank.service.BankService;
 
 @RestController
 public class BankController 

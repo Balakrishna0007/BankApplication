@@ -1,13 +1,13 @@
-package com.cybrilla.service;
+package com.bank.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.cybrilla.entity.BankCustomer;
-import com.cybrilla.entity.Transaction;
-import com.cybrilla.exception.InSufficientFundsException;
-import com.cybrilla.repository.BankRepository;
-import com.cybrilla.repository.TransactionRepository;
+import com.bank.entity.BankCustomer;
+import com.bank.entity.Transaction;
+import com.bank.exception.InSufficientFundsException;
+import com.bank.repository.BankRepository;
+import com.bank.repository.TransactionRepository;
 
 @Service
 public class TransactionService 

@@ -1,4 +1,4 @@
-package com.cybrilla.exception;
+package com.bank.exception;
 
 public class ErrorDetails 
 {

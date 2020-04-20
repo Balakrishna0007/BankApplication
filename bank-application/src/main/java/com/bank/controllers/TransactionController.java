@@ -1,12 +1,12 @@
-package com.cybrilla.controllers;
+package com.bank.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.cybrilla.entity.Transaction;
-import com.cybrilla.service.TransactionService;
+import com.bank.entity.Transaction;
+import com.bank.service.TransactionService;
 
 @RestController
 public class TransactionController 

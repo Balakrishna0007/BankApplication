@@ -1,4 +1,4 @@
-package com.cybrilla.entity;
+package com.bank.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

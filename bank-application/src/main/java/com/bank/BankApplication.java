@@ -1,12 +1,12 @@
-package com.cybrilla;
+package com.bank;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.cybrilla.entity.LoginEntity;
-import com.cybrilla.repository.LoginRepository;
+import com.bank.entity.LoginEntity;
+import com.bank.repository.LoginRepository;
 
 @SpringBootApplication
 public class BankApplication implements CommandLineRunner

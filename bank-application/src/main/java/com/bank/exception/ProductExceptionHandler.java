@@ -1,4 +1,4 @@
-package com.cybrilla.exception;
+package com.bank.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
