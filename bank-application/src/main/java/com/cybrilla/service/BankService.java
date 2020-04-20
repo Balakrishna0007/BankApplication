@@ -32,7 +32,24 @@ public class BankService
 		if(repo.exists(customer.getCustomerNumber()))
 		{
 			BankCustomer updateCustomer = repo.findOne(customer.getCustomerNumber());
-			updateCustomer.setBalance(customer.getBalance());
+			int newBalance = customer.getBalance() + updateCustomer.getBalance();
+			updateCustomer.setBalance(newBalance);
+			return repo.save(updateCustomer);
+		}
+		throw new CustomerNotFoundException("Deposit Not Possible for Not Existing Customer >>> "+customer.getCustomerNumber());
+	}
+	
+	public BankCustomer withdrawl(final BankCustomer customer)
+	{
+		if(repo.exists(customer.getCustomerNumber()))
+		{
+			BankCustomer updateCustomer = repo.findOne(customer.getCustomerNumber());
+			if(customer.getBalance() < updateCustomer.getBalance())
+			{
+				throw new CustomerNotFoundException("Balance is low "+customer.getCustomerNumber());
+			}
+			int newBalance = customer.getBalance() - updateCustomer.getBalance();
+			updateCustomer.setBalance(newBalance);
 			return repo.save(updateCustomer);
 		}
 		throw new CustomerNotFoundException("Deposit Not Possible for Not Existing Customer >>> "+customer.getCustomerNumber());

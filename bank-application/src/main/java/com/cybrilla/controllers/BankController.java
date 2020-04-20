@@ -49,6 +49,12 @@ public class BankController
 		return service.deposit(customer);
 	}
 	
+	@PutMapping("/withdrawl")
+	public BankCustomer withdrawl(@RequestBody BankCustomer customer)
+	{
+		return service.withdrawl(customer);
+	}
+	
 	@PutMapping("/updateCustomerDetails")
 	public BankCustomer updateBankAccountTypeDetails(@RequestBody BankCustomer customer)
 	{
