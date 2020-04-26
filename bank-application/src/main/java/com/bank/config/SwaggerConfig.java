@@ -2,6 +2,9 @@ package com.bank.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
@@ -20,6 +23,19 @@ public class SwaggerConfig {
                 .build()
                 .apiInfo(metaData());
     }
+   
+    
+    @Bean
+    public WebMvcConfigurer corsConfigurer() {
+        return new WebMvcConfigurerAdapter() {
+            @Override
+            public void addCorsMappings(CorsRegistry registry) {
+                registry.addMapping("/**");
+            }
+        };
+    }
+    
+    
     private ApiInfo metaData() {
         ApiInfo apiInfo = new ApiInfo("bankapplication", "bankapplication", "1.0","", "gunasekhar@gmail.com", "", "");
         return apiInfo;
