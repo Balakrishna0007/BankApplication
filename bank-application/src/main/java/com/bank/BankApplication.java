@@ -27,7 +27,7 @@ public class BankApplication implements CommandLineRunner
 		admin.setPassword("admin");
 		loginRepo.save(admin);
 		LoginEntity basicUser = new LoginEntity();
-		basicUser.setUserName("guna");
+		basicUser.setUserName("bala");
 		basicUser.setPassword("sekhar");
 		loginRepo.save(basicUser);
 	}
