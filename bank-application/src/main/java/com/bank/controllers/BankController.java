@@ -26,6 +26,7 @@ public class BankController
 	public BankCustomer addCustomer(@RequestBody BankCustomer customer)
 	{
 		//This is charan changes
+		//This is 2nd commit changes
 		BankCustomer cus = service.createUser(customer);
 		return cus;
 	}
